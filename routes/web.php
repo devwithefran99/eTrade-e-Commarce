@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\shopController;
+use App\Http\Controllers\wishlistController;
 use Symfony\Component\Routing\Route as RoutingRoute;
 
 Route::get('/', [HomeController::class, 'index'])->name('frontend.home');
@@ -28,3 +29,13 @@ Route::post('/logout', [CustomerAuthController::class, 'logout'])->name('fronten
 
 // *checkout Route
 Route::get('/chechout', [CartController::class, 'checkout'])->name('frontend.checkout');
+
+//*404 Route
+Route::get('/notFound', [HomeController::class, 'notFound'])->name('frontend.404');
+
+//*wishlists route
+Route::middleware(['customer'])->group(function () {
+    Route::post('/add-to-wishlist', [WishlistController::class, 'addToWishlist'])->name('frontend.addToWishlist');
+    Route::post('/remove-from-wishlist', [WishlistController::class, 'removeFromWishlist'])->name('frontend.removeFromWishlist');
+    Route::get('/wishlist', [WishlistController::class, 'index'])->name('frontend.wishlist');
+});

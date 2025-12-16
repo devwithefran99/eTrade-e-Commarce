@@ -23,14 +23,29 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         view()->composer('*', function ($view) {
-            $cart = Cart::with('product')->where('customer_id', auth('customer')?->user()->id ?? 0)->get();
+
+            $customerId = auth('customer')->user()->id ?? 0;
+
+            // CART
+            $cart = Cart::with('product')
+                ->where('customer_id', $customerId)
+                ->get();
 
             $view->with('carts', [
-                'count' => count($cart),
+                'count' => $cart->count(),
                 'data'  => $cart,
             ]);
-        });
 
+            // WISHLIST (default count = 0)
+            $wishlist = \App\Models\Wishlist::with('product')
+                ->where('customer_id', $customerId)
+                ->get();
+
+            $view->with('wishlists', [
+                'count' => $wishlist->count(), // login না থাকলে 0
+                'data'  => $wishlist,
+            ]);
+        });
 
         Paginator::useBootstrap();
     }

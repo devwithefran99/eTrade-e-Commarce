@@ -20,4 +20,9 @@ class HomeController extends Controller
     {
         return view('frontend.singleProduct', compact('product'));
     }
+
+    public function notFound()
+    {
+        return view('frontend.404');
+    }
 }

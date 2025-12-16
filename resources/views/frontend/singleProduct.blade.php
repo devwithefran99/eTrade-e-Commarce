@@ -406,7 +406,7 @@
                                 </div>
                                 <div class="product-hover-action">
                                     <ul class="cart-action">
-                                        <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a></li>
+                                        <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i class="far fa-heart"></i></a></li>
                                         <li class="select-option"><a href="cart.html">Add to Cart</a></li>
                                         <li class="quickview"><a href="single-product-3.html#" data-bs-toggle="modal" data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
                                     </ul>
@@ -445,7 +445,7 @@
                                 </div>
                                 <div class="product-hover-action">
                                     <ul class="cart-action">
-                                        <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a></li>
+                                        <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i class="far fa-heart"></i></a></li>
                                         <li class="select-option"><a href="cart.html">Add to Cart</a></li>
                                         <li class="quickview"><a href="single-product-3.html#" data-bs-toggle="modal" data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
                                     </ul>
@@ -484,7 +484,7 @@
                                 </div>
                                 <div class="product-hover-action">
                                     <ul class="cart-action">
-                                        <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a></li>
+                                        <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i class="far fa-heart"></i></a></li>
                                         <li class="select-option"><a href="cart.html">Add to Cart</a></li>
                                         <li class="quickview"><a href="single-product-3.html#" data-bs-toggle="modal" data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
                                     </ul>
@@ -523,7 +523,7 @@
                                 </div>
                                 <div class="product-hover-action">
                                     <ul class="cart-action">
-                                        <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a></li>
+                                        <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i class="far fa-heart"></i></a></li>
                                         <li class="select-option"><a href="cart.html">Add to Cart</a></li>
                                         <li class="quickview"><a href="single-product-3.html#" data-bs-toggle="modal" data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
                                     </ul>
@@ -562,7 +562,7 @@
                                 </div>
                                 <div class="product-hover-action">
                                     <ul class="cart-action">
-                                        <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a></li>
+                                        <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i class="far fa-heart"></i></a></li>
                                         <li class="select-option"><a href="cart.html">Add to Cart</a></li>
                                         <li class="quickview"><a href="single-product-3.html#" data-bs-toggle="modal" data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
                                     </ul>
@@ -602,7 +602,7 @@
                                 </div>
                                 <div class="product-hover-action">
                                     <ul class="cart-action">
-                                        <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a></li>
+                                        <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i class="far fa-heart"></i></a></li>
                                         <li class="select-option"><a href="cart.html">Add to Cart</a></li>
                                         <li class="quickview"><a href="single-product-3.html#" data-bs-toggle="modal" data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
                                     </ul>
@@ -641,7 +641,7 @@
                                 </div>
                                 <div class="product-hover-action">
                                     <ul class="cart-action">
-                                        <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a></li>
+                                        <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i class="far fa-heart"></i></a></li>
                                         <li class="select-option"><a href="cart.html">Add to Cart</a></li>
                                         <li class="quickview"><a href="single-product-3.html#" data-bs-toggle="modal" data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
                                     </ul>
@@ -680,7 +680,7 @@
                                 </div>
                                 <div class="product-hover-action">
                                     <ul class="cart-action">
-                                        <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a></li>
+                                        <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i class="far fa-heart"></i></a></li>
                                         <li class="select-option"><a href="cart.html">Add to Cart</a></li>
                                         <li class="quickview"><a href="single-product-3.html#" data-bs-toggle="modal" data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
                                     </ul>

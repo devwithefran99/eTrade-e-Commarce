@@ -92,19 +92,19 @@
                                     <a href="{{url('/shop')}}">Shop</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="index-1.html#">Pages</a>
+                                    <a href={{route('frontend.wishlist')}}>Pages</a>
                                     <ul class="axil-submenu">
-                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                        <li><a href="{{route('frontend.wishlist')}}">Wishlist</a></li>
                                         <li><a href="cart.html">Cart</a></li>
                                         <li><a href="{{route('frontend.checkout')}}">Checkout</a></li>
-                                        <li><a href="my-account.html">Account</a></li>
+                                        <li><a href="{{route('frontend.customer.profile')}}">Account</a></li>
                                         <li><a href="sign-up.html">Sign Up</a></li>
                                         <li><a href="sign-in.html">Sign In</a></li>
                                         <li><a href="forgot-password.html">Forgot Password</a></li>
                                         <li><a href="reset-password.html">Reset Password</a></li>
                                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
                                         <li><a href="coming-soon.html">Coming Soon</a></li>
-                                        <li><a href="404.html">404 Error</a></li>
+                                        <li><a href="{{route('frontend.404')}}">404 Error</a></li>
                                         <li><a href="typography.html">Typography</a></li>
                                     </ul>
                                 </li>
@@ -134,10 +134,12 @@
                                 </a>
                             </li>
                             <li class="wishlist">
-                                <a href="wishlist.html">
+                                <a href="{{ route('frontend.wishlist') }}">
+                                    <span class="wishlist-count">{{ $wishlists['count'] ?? 0 }}</span>
                                     <i class="flaticon-heart"></i>
                                 </a>
                             </li>
+
                             <li class="shopping-cart">
                                 <a href="index-1.html#" class="cart-dropdown-btn">
                                     <span class="cart-count">{{$carts['count']}}</span>
@@ -152,10 +154,10 @@
                                     <span class="title">QUICKLINKS</span>
                                     <ul>
                                         <li>
-                                            <a href="my-account.html">My Account</a>
+                                            <a href="{{route('frontend.customer.profile')}}">My Account</a>
                                         </li>
                                         <li>
-                                            <a href="index-1.html#">Initiate return</a>
+                                            <a href="index-1.html#">Another Account</a>
                                         </li>
                                         <li>
                                             <a href="index-1.html#">Support</a>
@@ -278,11 +280,11 @@
                             <h5 class="widget-title">Account</h5>
                             <div class="inner">
                                 <ul>
-                                    <li><a href="my-account.html">My Account</a></li>
+                                    <li><a href="{{route('frontend.customer.profile')}}">My Account</a></li>
                                     <li><a href="sign-up.html">Login / Register</a></li>
                                     <li><a href="cart.html">Cart</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="{{route('frontend.wishlist')}}">Wishlist</a></li>
+                                    <li><a href="{{route('fronted.shop')}}">Shop</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -513,7 +515,7 @@
                                             <ul class="product-action d-flex-center mb--0">
                                                 <li class="add-to-cart"><a href="cart.html"
                                                         class="axil-btn btn-bg-primary">Add to Cart</a></li>
-                                                <li class="wishlist"><a href="wishlist.html"
+                                                <li class="wishlist"><a href="{{route('frontend.wishlist')}}"
                                                         class="axil-btn wishlist-btn"><i class="far fa-heart"></i></a>
                                                 </li>
                                             </ul>
@@ -548,7 +550,7 @@
             <div class="card-body">
                 <div class="search-result-header">
                     <h6 class="title">24 Result Found</h6>
-                    <a href="shop.html" class="view-all">View All</a>
+                    <a href="{{route('fronted.shop')}}" class="view-all">View All</a>
                 </div>
                 <div class="psearch-results">
                     <div class="axil-product-list">
@@ -575,7 +577,7 @@
                             </div>
                             <div class="product-cart">
                                 <a href="cart.html" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
-                                <a href="wishlist.html" class="cart-btn"><i class="fal fa-heart"></i></a>
+                                <a href="{{route('frontend.wishlist')}}" class="cart-btn"><i class="fal fa-heart"></i></a>
                             </div>
                         </div>
                     </div>
@@ -603,7 +605,7 @@
                             </div>
                             <div class="product-cart">
                                 <a href="cart.html" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
-                                <a href="wishlist.html" class="cart-btn"><i class="fal fa-heart"></i></a>
+                                <a href="{{route('frontend.wishlist')}}" class="cart-btn"><i class="fal fa-heart"></i></a>
                             </div>
                         </div>
                     </div>
@@ -685,7 +687,7 @@
                         <h3 class="title">Best Sales Offer<br> Grab Yours</h3>
                     </div>
                     <div class="poster-countdown countdown"></div>
-                    <a href="shop.html" class="axil-btn btn-bg-primary">Shop Now <i
+                    <a href="{{route('fronted.shop')}}" class="axil-btn btn-bg-primary">Shop Now <i
                             class="fal fa-long-arrow-right"></i></a>
                 </div>
             </div>

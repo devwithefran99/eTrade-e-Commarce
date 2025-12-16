@@ -9,4 +9,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Customer extends Authenticatable
 {
     protected $guarded = ['id'];
+
+
+    public function wishlists()
+    {
+        return $this->hasMany(Wishlist::class);
+    }
 }

@@ -77,7 +77,7 @@
                                                         Add to Cart
                                                     </a>
                                                 </li>
-                                                <li class="wishlist"><a href="wishlist.html"><i
+                                                <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i
                                                             class="far fa-heart"></i></a></li>
                                             </ul>
                                         </div>

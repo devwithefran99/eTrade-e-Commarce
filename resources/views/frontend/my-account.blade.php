@@ -9,11 +9,13 @@
                     <div class="axil-dashboard-author">
                         <div class="media">
                             <div class="thumbnail">
-                                <img src="https://api.dicebear.com/9.x/initials/svg?seed={{auth()->user('customer')->name}}" width="100px" alt="Hello {{auth()->user('customer')->name}}">
+<img src="https://api.dicebear.com/9.x/initials/svg?seed={{ auth('customer')->user()?->name ?? 'Guest' }}"
+     width="100px"
+     alt="Hello {{ auth('customer')->user()?->name ?? 'Guest' }}">
                             </div>
                             <div class="media-body">
-                                <h5 class="title mb-0">{{auth()->user('customer')->name}}</h5>
-                                <span class="joining-date">eTrade Member Since {{auth()->user('customer')->created_at->format('Y, d M')}}</span>
+                                <h5 class="title mb-0">{{auth('customer')->user()->name}}</h5>
+                                <span class="joining-date">eTrade Member Since {{auth('customer')->user()->created_at->format('Y, d M')}}</span>
                             </div>
                         </div>
                     </div>
@@ -22,11 +24,11 @@
                             <aside class="axil-dashboard-aside">
                                 <nav class="axil-dashboard-nav">
                                     <div class="nav nav-tabs" role="tablist">
-                                        <a class="nav-item nav-link active" data-bs-toggle="tab" href="my-account.html#nav-dashboard" role="tab" aria-selected="true"><i class="fas fa-th-large"></i>Dashboard</a>
-                                        <a class="nav-item nav-link" data-bs-toggle="tab" href="my-account.html#nav-orders" role="tab" aria-selected="false"><i class="fas fa-shopping-basket"></i>Orders</a>
-                                        <a class="nav-item nav-link" data-bs-toggle="tab" href="my-account.html#nav-downloads" role="tab" aria-selected="false"><i class="fas fa-file-download"></i>Downloads</a>
-                                        <a class="nav-item nav-link" data-bs-toggle="tab" href="my-account.html#nav-address" role="tab" aria-selected="false"><i class="fas fa-home"></i>Addresses</a>
-                                        <a class="nav-item nav-link" data-bs-toggle="tab" href="my-account.html#nav-account" role="tab" aria-selected="false"><i class="fas fa-user"></i>Account Details</a>
+                                        <a class="nav-item nav-link active" data-bs-toggle="tab" href="{{route('frontend.customer.profile')}}#nav-dashboard" role="tab" aria-selected="true"><i class="fas fa-th-large"></i>Dashboard</a>
+                                        <a class="nav-item nav-link" data-bs-toggle="tab" href="{{route('frontend.customer.profile')}}#nav-orders" role="tab" aria-selected="false"><i class="fas fa-shopping-basket"></i>Orders</a>
+                                        <a class="nav-item nav-link" data-bs-toggle="tab" href="{{route('frontend.customer.profile')}}#nav-downloads" role="tab" aria-selected="false"><i class="fas fa-file-download"></i>Downloads</a>
+                                        <a class="nav-item nav-link" data-bs-toggle="tab" href="{{route('frontend.customer.profile')}}#nav-address" role="tab" aria-selected="false"><i class="fas fa-home"></i>Addresses</a>
+                                        <a class="nav-item nav-link" data-bs-toggle="tab" href="{{route('frontend.customer.profile')}}#nav-account" role="tab" aria-selected="false"><i class="fas fa-user"></i>Account Details</a>
                                         <a class="nav-item nav-link" href="sign-in.html"><i class="fal fa-sign-out"></i>Logout</a>
                                     </div>
                                 </nav>
@@ -65,35 +67,35 @@
                                                         <td>September 10, 2020</td>
                                                         <td>Processing</td>
                                                         <td>$326.63 for 3 items</td>
-                                                        <td><a href="my-account.html#" class="axil-btn view-btn">View</a></td>
+                                                        <td><a href="{{route('frontend.customer.profile')}}#" class="axil-btn view-btn">View</a></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">#6523</th>
                                                         <td>September 10, 2020</td>
                                                         <td>On Hold</td>
                                                         <td>$326.63 for 3 items</td>
-                                                        <td><a href="my-account.html#" class="axil-btn view-btn">View</a></td>
+                                                        <td><a href="{{route('frontend.customer.profile')}}#" class="axil-btn view-btn">View</a></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">#6523</th>
                                                         <td>September 10, 2020</td>
                                                         <td>Processing</td>
                                                         <td>$326.63 for 3 items</td>
-                                                        <td><a href="my-account.html#" class="axil-btn view-btn">View</a></td>
+                                                        <td><a href="{{route('frontend.customer.profile')}}#" class="axil-btn view-btn">View</a></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">#6523</th>
                                                         <td>September 10, 2020</td>
                                                         <td>Processing</td>
                                                         <td>$326.63 for 3 items</td>
-                                                        <td><a href="my-account.html#" class="axil-btn view-btn">View</a></td>
+                                                        <td><a href="{{route('frontend.customer.profile')}}#" class="axil-btn view-btn">View</a></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">#6523</th>
                                                         <td>September 10, 2020</td>
                                                         <td>Processing</td>
                                                         <td>$326.63 for 3 items</td>
-                                                        <td><a href="my-account.html#" class="axil-btn view-btn">View</a></td>
+                                                        <td><a href="{{route('frontend.customer.profile')}}#" class="axil-btn view-btn">View</a></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -113,7 +115,7 @@
                                                 <div class="address-info mb--40">
                                                     <div class="addrss-header d-flex align-items-center justify-content-between">
                                                         <h4 class="title mb-0">Shipping Address</h4>
-                                                        <a href="my-account.html#" class="address-edit"><i class="far fa-edit"></i></a>
+                                                        <a href="{{route('frontend.customer.profile')}}#" class="address-edit"><i class="far fa-edit"></i></a>
                                                     </div>
                                                     <ul class="address-details">
                                                         <li>Name: Annie Mario</li>
@@ -128,7 +130,7 @@
                                                 <div class="address-info">
                                                     <div class="addrss-header d-flex align-items-center justify-content-between">
                                                         <h4 class="title mb-0">Billing Address</h4>
-                                                        <a href="my-account.html#" class="address-edit"><i class="far fa-edit"></i></a>
+                                                        <a href="{{route('frontend.customer.profile')}}#" class="address-edit"><i class="far fa-edit"></i></a>
                                                     </div>
                                                     <ul class="address-details">
                                                         <li>Name: Annie Mario</li>

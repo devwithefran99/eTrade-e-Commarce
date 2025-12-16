@@ -14,7 +14,7 @@
                                     <h1 class="title">Roco Wireless Headphone</h1>
                                     <div class="slide-action">
                                         <div class="shop-btn">
-                                            <a href="shop.html" class="axil-btn btn-bg-white"><i
+                                            <a href="{{route('fronted.shop')}}" class="axil-btn btn-bg-white"><i
                                                     class="fal fa-shopping-cart"></i>Shop Now</a>
                                         </div>
                                         <div class="item-rating">
@@ -46,7 +46,7 @@
                                     <h1 class="title">Smart Digital Watch</h1>
                                     <div class="slide-action">
                                         <div class="shop-btn">
-                                            <a href="shop.html" class="axil-btn btn-bg-white"><i
+                                            <a href="{{route('fronted.shop')}}" class="axil-btn btn-bg-white"><i
                                                     class="fal fa-shopping-cart"></i>Shop Now</a>
                                         </div>
                                         <div class="item-rating">
@@ -78,7 +78,7 @@
                                     <h1 class="title">Roco Wireless Headphone</h1>
                                     <div class="slide-action">
                                         <div class="shop-btn">
-                                            <a href="shop.html" class="axil-btn btn-bg-white"><i
+                                            <a href="{{route('fronted.shop')}}" class="axil-btn btn-bg-white"><i
                                                     class="fal fa-shopping-cart"></i>Shop Now</a>
                                         </div>
                                         <div class="item-rating">
@@ -110,7 +110,7 @@
                                     <h1 class="title">Smart Digital Watch</h1>
                                     <div class="slide-action">
                                         <div class="shop-btn">
-                                            <a href="shop.html" class="axil-btn btn-bg-white"><i
+                                            <a href="{{route('fronted.shop')}}" class="axil-btn btn-bg-white"><i
                                                     class="fal fa-shopping-cart"></i>Shop Now</a>
                                         </div>
                                         <div class="item-rating">
@@ -285,8 +285,17 @@
                                                         Add to Cart
                                                     </a>
                                                 </li>
-                                                <li class="wishlist"><a href="wishlist.html"><i
-                                                            class="far fa-heart"></i></a></li>
+                                               <li class="wishlist">
+    <form action="{{ route('frontend.addToWishlist') }}" method="POST" style="display:inline">
+        @csrf
+        <input type="hidden" name="product_id" value="{{ $product->id }}">
+        <button type="submit" class="btn btn-link p-0">
+           <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i class="far fa-heart"></i></a></li>
+        </button>
+    </form>
+</li>
+
+
                                             </ul>
                                         </div>
                                     </div>
@@ -341,7 +350,7 @@
                                                             class="far fa-eye"></i></a></li>
                                                 <li class="select-option"><a href="{{route('frontend.product.veiw', $product)}}">Select
                                                         Option</a></li>
-                                                <li class="wishlist"><a href="wishlist.html"><i
+                                                <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i
                                                             class="far fa-heart"></i></a></li>
                                             </ul>
                                         </div>
@@ -367,7 +376,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 text-center mt--20 mt_sm--0">
-                        <a href="shop.html" class="axil-btn btn-bg-lighter btn-load-more">View All Products</a>
+                        <a href="{{route('fronted.shop')}}" class="axil-btn btn-bg-lighter btn-load-more">View All Products</a>
                     </div>
                 </div>
 
@@ -519,7 +528,7 @@
                                                             class="far fa-eye"></i></a></li>
                                                 <li class="select-option"><a href="{{route('frontend.product.veiw', $product)}}">Add to Cart</a>
                                                 </li>
-                                                <li class="wishlist"><a href="wishlist.html"><i
+                                                <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i
                                                             class="far fa-heart"></i></a></li>
                                             </ul>
                                         </div>
@@ -562,7 +571,7 @@
                                             </li>
                                             <li class="select-option"><a href="{{route('frontend.product.veiw', $product)}}">Select Option</a>
                                             </li>
-                                            <li class="wishlist"><a href="wishlist.html"><i
+                                            <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i
                                                         class="far fa-heart"></i></a></li>
                                         </ul>
                                     </div>
@@ -607,7 +616,7 @@
                                                             class="far fa-eye"></i></a></li>
                                                 <li class="select-option"><a href="{{route('frontend.product.veiw', $product)}}">Add to Cart</a>
                                                 </li>
-                                                <li class="wishlist"><a href="wishlist.html"><i
+                                                <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i
                                                             class="far fa-heart"></i></a></li>
                                             </ul>
                                         </div>
@@ -653,7 +662,7 @@
                                                             class="far fa-eye"></i></a></li>
                                                 <li class="select-option"><a href="{{route('frontend.product.veiw', $product)}}">Add to Cart</a>
                                                 </li>
-                                                <li class="wishlist"><a href="wishlist.html"><i
+                                                <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i
                                                             class="far fa-heart"></i></a></li>
                                             </ul>
                                         </div>
@@ -698,7 +707,7 @@
                                                             class="far fa-eye"></i></a></li>
                                                 <li class="select-option"><a href="{{route('frontend.product.veiw', $product)}}">Add to Cart</a>
                                                 </li>
-                                                <li class="wishlist"><a href="wishlist.html"><i
+                                                <li class="wishlist"><a href="{{route('frontend.wishlist')}}"><i
                                                             class="far fa-heart"></i></a></li>
                                             </ul>
                                         </div>
@@ -749,7 +758,7 @@
                                     </div>
                                     <div class="product-cart">
                                         <a href="cart.html" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
-                                        <a href="wishlist.html" class="cart-btn"><i class="fal fa-heart"></i></a>
+                                        <a href="{{route('frontend.wishlist')}}" class="cart-btn"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -780,7 +789,7 @@
                                     </div>
                                     <div class="product-cart">
                                         <a href="cart.html" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
-                                        <a href="wishlist.html" class="cart-btn"><i class="fal fa-heart"></i></a>
+                                        <a href="{{route('frontend.wishlist')}}" class="cart-btn"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -811,7 +820,7 @@
                                     </div>
                                     <div class="product-cart">
                                         <a href="cart.html" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
-                                        <a href="wishlist.html" class="cart-btn"><i class="fal fa-heart"></i></a>
+                                        <a href="{{route('frontend.wishlist')}}" class="cart-btn"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -842,7 +851,7 @@
                                     </div>
                                     <div class="product-cart">
                                         <a href="cart.html" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
-                                        <a href="wishlist.html" class="cart-btn"><i class="fal fa-heart"></i></a>
+                                        <a href="{{route('frontend.wishlist')}}" class="cart-btn"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -873,7 +882,7 @@
                                     </div>
                                     <div class="product-cart">
                                         <a href="cart.html" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
-                                        <a href="wishlist.html" class="cart-btn"><i class="fal fa-heart"></i></a>
+                                        <a href="{{route('frontend.wishlist')}}" class="cart-btn"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -905,7 +914,7 @@
                                     </div>
                                     <div class="product-cart">
                                         <a href="cart.html" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
-                                        <a href="wishlist.html" class="cart-btn"><i class="fal fa-heart"></i></a>
+                                        <a href="{{route('frontend.wishlist')}}" class="cart-btn"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -936,7 +945,7 @@
                                     </div>
                                     <div class="product-cart">
                                         <a href="cart.html" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
-                                        <a href="wishlist.html" class="cart-btn"><i class="fal fa-heart"></i></a>
+                                        <a href="{{route('frontend.wishlist')}}" class="cart-btn"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -967,7 +976,7 @@
                                     </div>
                                     <div class="product-cart">
                                         <a href="cart.html" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
-                                        <a href="wishlist.html" class="cart-btn"><i class="fal fa-heart"></i></a>
+                                        <a href="{{route('frontend.wishlist')}}" class="cart-btn"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -1038,7 +1047,7 @@
                 <div class="row">
                     <div class="col-lg-6 mb--30">
                         <div class="single-poster">
-                            <a href="shop.html">
+                            <a href="{{route('fronted.shop')}}">
                                 <img src="{{ asset('frontend/assets/images/product/poster/poster-01.png')}}" alt="eTrade promotion poster">
                                 <div class="poster-content">
                                     <div class="inner">
